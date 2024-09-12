@@ -1,0 +1,192 @@
+/* Reset básico para remover margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis de cores */
+:root {
+    --primary-color: #11275b;
+    --secondary-color: #f0f0f0;
+    --hover-color: #ffffff;
+    --focus-outline: #007BFF;
+    --nav-bg-color: #ffffff; /* Nova cor para o menu de navegação */
+}
+
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--secondary-color);
+    color: #333;
+    padding: 20px;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao cabeçalho */
+    position: relative; /* Necessário para a logo sobrepor */
+    z-index: 1; /* Garante que o cabeçalho esteja abaixo da logo */
+}
+
+header .titulo-container {
+    margin-bottom: 10px;
+}
+
+header .logo-container {
+    position: absolute; /* Faz a logo sobrepor */
+    top: 100%; /* Posiciona a logo logo abaixo do cabeçalho */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição para o centro exato */
+    background-color: var(--secondary-color); /* Fundo branco para a caixa */
+    padding: 5px;
+    border-radius: 5px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao redor da caixa */
+    z-index: 3; /* Garante que a logo esteja acima do cabeçalho e do nav */
+}
+
+header img {
+    width:90px; /* Largura da imagem */
+    height: auto; /* Altura automática para manter a proporção */
+}
+
+/* Estilo para o contêiner de navegação */
+nav {
+    position: relative; /* Necessário para a logo sobrepor */
+   /* background-color: var(--nav-bg-color); /* Cor de fundo para o menu de navegação */
+    padding: 4px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao menu de navegação */
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    z-index: 1; /* Garante que o nav esteja abaixo da logo */
+}
+
+/* Estilo para a lista de navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Usa flexbox para os itens da lista */
+    gap: 80px; /* Espaçamento entre os itens */
+}
+
+/* Estilo para os itens da lista de navegação */
+nav ul li {
+    display: inline;
+}
+
+/* Estilo para os links de navegação */
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--hover-color); /* Cor ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+    background-color: var(--primary-color); /* Muda a cor de fundo ao passar o mouse */
+}
+
+nav ul li a:focus {
+    outline: 2px solid var(--focus-outline);
+}
+
+/* Estilo para o rodapé */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo para o conteúdo principal */
+main {
+    margin-top: 20px;
+}
+
+/* Estilo para tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Estilo para listas */
+ul, ol {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+ul li, ol li {
+    margin-bottom: 10px;
+}
+
+/* Estilo para a galeria de fotos */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.galeria img {
+    max-width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Responsividade */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Muda a direção dos itens para coluna em telas menores */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    header .logo-container {
+        width: 80px;
+        padding: 5px;
+    }
+
+    header img {
+        width: 100%;
+    }
+
+    body {
+        padding: 10px;
+    }
+}

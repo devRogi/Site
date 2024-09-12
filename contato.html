@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <div class="titulo-container">
+            <h1>Contato</h1>
+        </div>
+        <div class="logo-container">
+            <a href="https://uniube.br/" title="Página inicial Uniube">
+                <img src="https://uniube.br/img/landing/logo_azul.svg" title="Página Inicial | Uniube" alt="Logo Uniube">
+            </a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="fotos.html">Fotos</a></li>
+            <li><a href="tabela.html">Tabela</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Formulário de Contato</h2>
+            <form action="enviar.php" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" aria-label="Digite seu nome">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" aria-label="Digite seu email"><br>
+                <label for="mensagem">Mensagem:</label><br>
+                <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" aria-label="Digite sua mensagem"></textarea><br>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Roger David Rodriguez Aranda - RA: 5163229</p>
+    </footer>
+</body>
+</html>

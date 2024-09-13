@@ -7,11 +7,13 @@
 
 /* Variáveis de cores */
 :root {
-    --primary-color: #11275b;
+    --primary-color: #1b1b1e;
+    --nav-color: #0e42bb;
+    --effect-color-nav: #004bfb;
     --secondary-color: #f0f0f0;
     --hover-color: #ffffff;
     --focus-outline: #007BFF;
-    --nav-bg-color: #ffffff; /* Nova cor para o menu de navegação */
+    --footer-color: #0e42bb;
 }
 
 /* Estilo para o corpo da página */
@@ -38,9 +40,10 @@ header .titulo-container {
     margin-bottom: 10px;
 }
 
+/* UNIUBE LOGO */
 header .logo-container {
     position: absolute; /* Faz a logo sobrepor */
-    top: 100%; /* Posiciona a logo logo abaixo do cabeçalho */
+    top: 100%; /* Posiciona a logo abaixo do cabeçalho */
     left: 50%; /* Centraliza horizontalmente */
     transform: translate(-50%, -50%); /* Ajusta a posição para o centro exato */
     background-color: var(--secondary-color); /* Fundo branco para a caixa */
@@ -50,18 +53,18 @@ header .logo-container {
     z-index: 3; /* Garante que a logo esteja acima do cabeçalho e do nav */
 }
 
+/* UNIUBE LOGO */
 header img {
-    width:90px; /* Largura da imagem */
+    width: 90px; /* Largura da logo uniube */
     height: auto; /* Altura automática para manter a proporção */
 }
 
 /* Estilo para o contêiner de navegação */
 nav {
-    position: relative; /* Necessário para a logo sobrepor */
-   /* background-color: var(--nav-bg-color); /* Cor de fundo para o menu de navegação */
+    position: relative; /* sobrepor a logo sobrepor */
     padding: 4px 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao menu de navegação */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra no menu de navegação */
     display: flex;
     justify-content: center; /* Centraliza os itens horizontalmente */
     z-index: 1; /* Garante que o nav esteja abaixo da logo */
@@ -80,10 +83,10 @@ nav ul li {
     display: inline;
 }
 
-/* Estilo para os links de navegação */
+/* Animações para os links na div de navegação */
 nav ul li a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--nav-color);
     font-weight: bold;
     transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
@@ -91,7 +94,7 @@ nav ul li a {
 nav ul li a:hover {
     color: var(--hover-color); /* Cor ao passar o mouse */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
-    background-color: var(--primary-color); /* Muda a cor de fundo ao passar o mouse */
+    background-color: var(--effect-color-nav); /* Muda a cor de fundo ao passar o mouse */
 }
 
 nav ul li a:focus {
@@ -100,10 +103,10 @@ nav ul li a:focus {
 
 /* Estilo para o rodapé */
 footer {
-    background: #333;
+    background: var(--footer-color);
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 5px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -135,7 +138,7 @@ th {
     color: #fff;
 }
 
-/* Estilo para listas */
+/* Estilo para area com: inicio, links, fotos, tabela, contato */
 ul, ol {
     margin: 20px 0;
     padding-left: 20px;
@@ -145,7 +148,114 @@ ul li, ol li {
     margin-bottom: 10px;
 }
 
-/* Estilo para a galeria de fotos */
+/* UNIUBE LOGO */
+header .logo-container {
+    position: absolute; /* Faz a logo sobrepor */
+    top: 100%; /* Posiciona a logo abaixo do cabeçalho */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição para o centro exato */
+    background-color: var(--secondary-color); /* Fundo branco para a caixa */
+    padding: 5px;
+    border-radius: 5px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao redor da caixa */
+    z-index: 3; /* Garante que a logo esteja acima do cabeçalho e do nav */
+}
+/* UNIUBE LOGO */
+header img {
+    width:90px; /* Largura da logo uniube */
+    height: auto; /* Altura automática para manter a proporção */
+}
+
+/* Estilo para o contêiner de navegação */
+nav {
+    position: relative; /* sobrepor a logo sobrepor */
+    padding: 4px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra no menu de navegação */
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    z-index: 1; /* Garante que o nav esteja abaixo da logo */
+}
+
+/* Estilo para a lista de navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Usa flexbox para os itens da lista */
+    gap: 80px; /* Espaçamento entre os itens */
+}
+
+/* Estilo para os itens da lista de navegação */
+nav ul li {
+    display: inline;
+}
+
+/* Animações para os links na div de navegação */
+nav ul li a {
+    text-decoration: none;
+    color: var(--nav-color);
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--hover-color); /* Cor ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+    background-color: var(--effect-color-nav); /* Muda a cor de fundo ao passar o mouse */
+}
+
+nav ul li a:focus {
+    outline: 2px solid var(--focus-outline);
+}
+
+/* Estilo para o rodapé */
+footer {
+    background: var(--footer-color);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo para o conteúdo principal */
+main {
+    margin-top: 20px;
+}
+
+/* Estilo para tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Estilo para area com: inicio, links, fotos, tabela, contato */
+ul, ol {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+ul li, ol li {
+    margin-bottom: 10px;
+}
+
+/*ESTILO PARA A GALERIA DE FOTOS */
 .galeria {
     display: flex;
     flex-wrap: wrap;
@@ -166,10 +276,71 @@ ul li, ol li {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+/* ESTILO PARA O FORMULÁRIO DE CONTATO */
+form {
+    /* Apenas para centralizar o form na página */
+    margin: 0 auto;
+    width: 400px;
+    /* Para ver as bordas do formulário */
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+  }
+  form div + div {
+    margin-top: 1em;
+  }
+  label {
+    /*Para ter certeza que todas as labels tem o mesmo tamanho e estão propriamente alinhadas */
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+  }
+  input,
+  textarea {
+    /* Para certificar-se que todos os campos de texto têm as mesmas configurações de fonte. Por padrão, textareas ter uma fonte monospace*/
+    font: 1em sans-serif;
+  
+    /* Para dar o mesmo tamanho a todos os campo de texto */
+    width: 300px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  
+    /* Para harmonizar o look & feel das bordas nos campos de texto*/
+    border: 1px solid #999;
+  }
+  input:focus,
+  textarea:focus {
+    /* Dar um pouco de destaque nos elementos ativos */
+    border-color: #000;
+  }
+  textarea {
+    /* Para alinhar corretamente os campos de texto de várias linhas com sua label*/
+    vertical-align: top;
+  
+    /* Para dar espaço suficiente para digitar algum texto */
+    height: 5em;
+  
+    /* Para permitir aos usuários redimensionarem qualquer textarea verticalmente. Ele não funciona em todos os browsers */
+    resize: vertical;
+  }
+  .button {
+    /* Para posicionar os botões para a mesma posição dos campos de texto */
+    padding-left: 90px; /* mesmo tamanho que os elementos do tipo label */
+  }
+  button {
+    /* Esta margem extra representa aproximadamente o mesmo espaço que o espaço entre as labels e os seus campos de texto*/
+    margin-left: 0.5em;
+  }
+          
+
 
 /* Responsividade */
 @media (max-width: 600px) {
+    header, nav, footer {
+        text-align: center;
+    }
     nav ul {
+        display: flex; /* Adicionado */
         flex-direction: column; /* Muda a direção dos itens para coluna em telas menores */
     }
 
@@ -178,7 +349,7 @@ ul li, ol li {
     }
 
     header .logo-container {
-        width: 80px;
+        width: 70px;
         padding: 5px;
     }
 
@@ -188,5 +359,15 @@ ul li, ol li {
 
     body {
         padding: 10px;
+    }
+}
+
+/* Estilos para telas entre 601px e 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+    nav ul {
+        gap: 90px;
+    }
+    header .logo-container {
+        margin-top: 0px; /* Ajustado */
     }
 }

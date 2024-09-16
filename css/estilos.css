@@ -152,6 +152,9 @@ section {
     margin: 20px;
 }
 
+.contato-container {
+    text-align: center;
+}
 
 /* UNIUBE LOGO */
 header .logo-container {

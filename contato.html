@@ -28,26 +28,29 @@
     </nav>
     <main>
         <section>
-            <h2>Formulário de Contato</h2>
+            <div class="contato-container">
+                <h2>Formulário de Contato</h2>
+            </div>
             <form action="process.php" method="post">
                 <div>
-                  <label for="name">Nome:</label>
-                  <input type="text" id="name" placeholder="Digite seu nome" aria-label="Digite seu nome" />
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" placeholder="Digite seu nome" aria-label="Digite seu nome" />
                 </div>
                 <div>
-                  <label for="mail">E-mail:</label>
-                  <input type="email" id="mail" placeholder="Digite seu email" aria-label="Digite seu email"/>
+                    <label for="mail">E-mail:</label>
+                    <input type="email" id="mail" name="mail" placeholder="Digite seu email" aria-label="Digite seu email"/>
                 </div>
                 <div>
-                  <label for="msg">Mensagem:</label>
-                  <textarea id="msg" placeholder="Digite sua mensagem" aria-label="Digite sua mensagem"></textarea >
+                    <label for="msg">Mensagem:</label>
+                    <textarea id="msg" name="msg" placeholder="Digite sua mensagem" aria-label="Digite sua mensagem"></textarea>
                 </div>
                 <div class="button">
-                  <button type="submit">Enviar sua mensagem</button>
+                    <button type="submit">Enviar sua mensagem</button>
                 </div>
-              </form>
+            </form>
         </section>
     </main>
+    
     <footer>
         <p>Roger David Rodriguez Aranda - RA: 5163229</p>
     </footer>
